@@ -4,6 +4,7 @@
 #include <dirent.h>
 #include <ctype.h>
 
+/* Hello */
 
 typedef 
 	enum {
