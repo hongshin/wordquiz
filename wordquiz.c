@@ -15,7 +15,7 @@ typedef
 	}
 	command_t ;
 
-char * read_a_line (FILE * fp)
+char * read_line (FILE * fp)
 {
 	static char buf[BUFSIZ] ;
 	static int buf_n = 0 ;
