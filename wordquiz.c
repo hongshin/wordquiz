@@ -4,8 +4,7 @@
 #include <dirent.h>
 #include <ctype.h>
 
-/* Hi */
-
+/*단어 퀴즈 프로그램*/
 typedef 
 	enum {
 		C_ZERO,
@@ -16,7 +15,7 @@ typedef
 	}
 	command_t ;
 
-
+// 파일로부터 한 줄을 읽어오는 함수
 char * read_a_line (FILE * fp)
 {
 	static char buf[BUFSIZ] ;
@@ -64,7 +63,7 @@ char * read_a_line (FILE * fp)
 }
 
 
-
+//메뉴를 출력하는 함수
 void print_menu() {
 
 	printf("1. List all wordbooks\n") ;
@@ -72,7 +71,7 @@ void print_menu() {
 	printf("3. Test with a wordbook\n") ;
 	printf("4. Exit\n") ;
 }
-
+//사용자로부터 명령어를 입력받는 함수
 int get_command() {
 	int cmd ;
 
@@ -80,7 +79,7 @@ int get_command() {
 	scanf("%d", &cmd) ;
 	return cmd ;
 }
-
+//단어장 목록을 출력하는 함수
 void list_wordbooks ()
 {
 
@@ -98,7 +97,7 @@ void list_wordbooks ()
 
 	printf("  ----\n") ;
 }
-
+//단어장의 단어와 뜻을 출력하는 함수
 void show_words ()
 {
 	char wordbook[128] ;
@@ -130,7 +129,7 @@ void show_words ()
 	fclose(fp) ;
 }
 
-
+//단어 퀴즈를 실행하는 함수
 void run_test ()
 {
 	char wordbook[128] ;
@@ -180,7 +179,7 @@ void run_test ()
 	fclose(fp) ;
 }
 
-
+//메인함수
 int main ()
 {
 	
